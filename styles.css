@@ -41,6 +41,10 @@ header {
   /* height: 80%; */
 }
 
+.game-type:hover {
+  background-color: red;
+}
+
 .player-side {
   grid-column: 1;
   background-color: lightblue;
@@ -55,9 +59,14 @@ header {
   border: blue 1px solid;
   background-color: rgb(255,184,255);
   width: 45%;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .player-side,
-.computer-side{
+.computer-side {
   padding-top: 5%;
+}
+
+.emoji {
+  font-size: 166%;
 }
