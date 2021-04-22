@@ -3,7 +3,7 @@ class Player {
     this.name = name;
     this.emoji = emoji;
     this.wins = 0;
-    this.fighterChoice = ;
+    this.fighterChoice = 0;
   }
 
   saveWinsToStorage() {
@@ -22,12 +22,14 @@ class Player {
     var numWins = JSON.parse(localStorage.getItem(`${this.name}wins`));
   }
 
-  takeTurn(userChoice) {
+  takeTurn(userChoice, game) {
     if (this.name === "Computer") {
-      getRandomNumber();
-      this.fighterChoice = getRandomNumber;
-      } else {
+      var number = getRandomNumber();
+      this.fighterChoice = number;
+      game.currentTurn = "player1";
+    } else {
         this.fighterChoice = userChoice;
+        game.currentTurn = "player2";
     }
   }
 }
