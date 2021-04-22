@@ -9,6 +9,11 @@ class Player {
   saveWinsToStorage() {
     //checklocalstorage and reset if need be
     var numWins = JSON.parse(localStorage.getItem(`${this.name}wins`));
+    if (!numWins) {
+      numWins = this.wins;
+      localStorage.setItem(`${this.name}wins`, JSON.stringify(numWins));
+      return;
+    }
     numWins += this.wins;
     localStorage.setItem(`${this.name}wins`, JSON.stringify(numWins));
   }
@@ -17,8 +22,12 @@ class Player {
     var numWins = JSON.parse(localStorage.getItem(`${this.name}wins`));
   }
 
-  takeTurn(game) {
-    game.currentTurn = this;
-    game.numTurns ++;
+  takeTurn(userChoice) {
+    if (this.name === "Computer") {
+      getRandomNumber();
+      this.fighterChoice = getRandomNumber;
+      } else {
+        this.fighterChoice = userChoice;
+    }
   }
 }

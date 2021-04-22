@@ -5,11 +5,10 @@ class Game {
     this.gameType = "classic";
     this.currentTurn = player1;
     this.numTurns = 0;
-    this.player1Fighter = ;
-    this.player2Fighter = ;
   }
 
-  checkWinner() {
+  checkWinner() { 
+    player2.takeTurn(this);
     var p1Fighter = this.player1.fighterChoice;
     var p2Fighter = this.player2.fighterChoice;
     var result = p1Fighter - p2Fighter;
