@@ -3,6 +3,7 @@ class Player {
     this.name = name;
     this.emoji = emoji;
     this.wins = 0;
+    this.fighterChoice = ;
   }
 
   saveWinsToStorage() {
@@ -16,7 +17,8 @@ class Player {
     var numWins = JSON.parse(localStorage.getItem(`${this.name}wins`));
   }
 
-  takeTurn(fighterChoice) {
-    
+  takeTurn(game) {
+    game.currentTurn = this;
+    game.numTurns ++;
   }
 }
