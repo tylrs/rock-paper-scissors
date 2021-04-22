@@ -22,6 +22,7 @@ main {
   grid-column: 2;
   display: grid;
   grid-template-rows: 30% 70%;
+  grid-template-columns: 100%;
   background-color: pink;
 }
 
@@ -74,11 +75,29 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  grid-row: 2;
+}
+
+figure {
+  width: 30%;
+  height: 45%;
+  margin: 0;
+  font-size:100%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
-  width: 30%;
-  height: 45%;
+  width: 90%;
+  height: 90%;
+  border-radius: 5%;
+}
+
+figcaption {
+  padding-top: 5%;
 }
 
  /* Show/hide */
