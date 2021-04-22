@@ -38,7 +38,6 @@ header {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /* height: 80%; */
 }
 
 .game-type:hover {
@@ -70,3 +69,19 @@ header {
 .emoji {
   font-size: 166%;
 }
+
+.classic-mode {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img {
+  width: 30%;
+  height: 45%;
+}
+
+ /* Show/hide */
+ .hidden {
+   display: none;
+ }
