@@ -27,11 +27,11 @@ class Game {
     if (!result) {
       console.log("draw");
     } else if (result === 1 || result === -2) {
-      console.log("player1 wins")
+      console.log("human wins")
       this.player1.wins ++;
       this.player1.saveWinsToStorage();
     } else {
-      console.log("player2 wins")
+      console.log("computer wins")
       this.player2.wins ++;
       this.player2.saveWinsToStorage();
     }
