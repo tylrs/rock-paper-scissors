@@ -9,8 +9,8 @@ var classicModeResults = document.querySelector('.classic-mode-results')
 var classicModeSubtitle = document.querySelector('.title h2')
 var figures = document.querySelectorAll('figure');
 
-var player1Choice = document.querySelector('#p1-choice figure');
-var player2Choice = document.querySelector('#p2-choice figure');
+var player1Choice = document.querySelector('#p1-choice');
+var player2Choice = document.querySelector('#p2-choice');
 
 //MESS AROUND
 // console.log(figures)
@@ -60,10 +60,10 @@ function displayFighters(p1Fighter, p2Fighter) {
     if (parseInt(figures[i].id) === p1Fighter) {
       console.log("p1fighter working");
       console.log(figures[i]);
-      player1Choice.innerHTML += figures[i].innerHTML;
+      player1Choice.innerHTML += figures[i].outerHTML;
     } else if (parseInt(figures[i].id) === p2Fighter) {
       console.log(figures[i]);
-      player2Choice.innerHTML += figures[i].innerHTML;
+      player2Choice.innerHTML += figures[i].outerHTML;
     }
   }
 }

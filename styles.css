@@ -80,8 +80,8 @@ header {
   grid-row: 2;
 }
 
-.player-choice {
-  margin: 0;
+.player-choice figure {
+  width: 40%;
 }
 
 figure {
