@@ -80,8 +80,13 @@ header {
   grid-row: 2;
 }
 
-.player-choice figure {
-  width: 40%;
+.player-choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 50%;
 }
 
 figure {
