@@ -23,7 +23,7 @@ main {
   display: grid;
   grid-template-rows: 30% 70%;
   grid-template-columns: 100%;
-  background-color: pink;
+  background-color: purple;
 }
 
 header {
@@ -72,11 +72,16 @@ header {
   font-size: 166%;
 }
 
-.classic-mode {
+.classic-mode,
+.classic-mode-results {
   display: flex;
   justify-content: space-around;
   align-items: center;
   grid-row: 2;
+}
+
+.player-choice {
+  margin: 0;
 }
 
 figure {

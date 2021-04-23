@@ -5,7 +5,17 @@ var computerWins = document.querySelector('#computerWins');
 var classicModeButton = document.querySelector('#classicModeButton');
 var chooseGameView = document.querySelector('.choose-game');
 var classicModeView = document.querySelector('.classic-mode');
+var classicModeResults = document.querySelector('.classic-mode-results')
 var classicModeSubtitle = document.querySelector('.title h2')
+var figures = document.querySelectorAll('figure');
+
+var player1Choice = document.querySelector('#p1-choice figure');
+var player2Choice = document.querySelector('#p2-choice figure');
+
+//MESS AROUND
+// console.log(figures)
+// console.log(figures[0]);
+// classicModeResults.innerHTML = figures[0].innerHTML;
 
 
 //Global Variables
@@ -41,6 +51,21 @@ function startGame(event) {
 function getRandomNumber() {
   var number = Math.floor(Math.random() * (4-1) + 1);
   return number;
+}
+
+function displayFighters(p1Fighter, p2Fighter) {
+  hide(classicModeView);
+  show(classicModeResults);
+  for (var i = 0; i < figures.length; i ++) {
+    if (parseInt(figures[i].id) === p1Fighter) {
+      console.log("p1fighter working");
+      console.log(figures[i]);
+      player1Choice.innerHTML += figures[i].innerHTML;
+    } else if (parseInt(figures[i].id) === p2Fighter) {
+      console.log(figures[i]);
+      player2Choice.innerHTML += figures[i].innerHTML;
+    }
+  }
 }
 
 function displayWins(player1Wins, player2Wins) {

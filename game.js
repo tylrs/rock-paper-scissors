@@ -15,9 +15,10 @@ class Game {
     this.player1.takeTurn(userChoice, this);
     this.player2.takeTurn(userChoice, this);
     this.checkWinner();
+    displayFighters(this.player1Fighter, this.player2Fighter);
     displayWins(this.player1.wins, this.player2.wins);
     // displayRe
-    this.resetBoard();
+    // this.resetBoard();
   }
 
   checkWinner() {
