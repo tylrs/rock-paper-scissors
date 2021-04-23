@@ -57,7 +57,11 @@ function displayFighters(p1Fighter, p2Fighter) {
   hide(classicModeView);
   show(classicModeResults);
   for (var i = 0; i < figures.length; i ++) {
-    if (parseInt(figures[i].id) === p1Fighter) {
+    if (parseInt(figures[i].id) === p1Fighter && parseInt(figures[i].id) === p2Fighter) {
+      console.log("It's a draw");
+      player1Choice.innerHTML += figures[i].outerHTML;
+      player2Choice.innerHTML += figures[i].outerHTML;
+    } else if (parseInt(figures[i].id) === p1Fighter) {
       console.log("p1fighter working");
       console.log(figures[i]);
       player1Choice.innerHTML += figures[i].outerHTML;
