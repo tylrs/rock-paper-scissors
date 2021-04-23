@@ -105,6 +105,7 @@ img:hover {
 
 figcaption {
   padding-top: 5%;
+  cursor: pointer;
 }
 
  /* Show/hide */
