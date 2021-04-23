@@ -4,7 +4,6 @@ class Game {
     this.player2 = new Player("Computer", "📟");
     this.gameType = "classic";
     this.currentTurn = "player1";
-    this.numTurns = 0;
     this.player1Fighter = 0;
     this.player2Fighter = 0;
   }
@@ -13,7 +12,9 @@ class Game {
     this.player1.takeTurn(userChoice, this);
     this.player2.takeTurn(userChoice, this);
     this.checkWinner();
-    // resetBoard();
+    // displayResults
+    this.resetBoard();
+    console.log(this);
   }
 
   checkWinner() {
@@ -35,6 +36,12 @@ class Game {
   }
 
   resetBoard() {
-
+    var timeout = setTimeout(function() {
+      this.player1Fighter = 0;
+      this.player2Fighter = 0;
+      console.log("You lose");
+      // return to homeview
+    }, 5000);
+    //updateWins
   }
 }
