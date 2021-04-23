@@ -7,7 +7,6 @@ class Player {
   }
 
   saveWinsToStorage() {
-    //checklocalstorage and reset if need be
     var numWins = JSON.parse(localStorage.getItem(`${this.name}wins`));
     if (!numWins) {
       numWins = this.wins;
@@ -20,6 +19,7 @@ class Player {
 
   retrieveWinsFromStorage() {
     var numWins = JSON.parse(localStorage.getItem(`${this.name}wins`));
+    this.wins = numWins;
   }
 
   takeTurn(userChoice, game) {

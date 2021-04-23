@@ -26,9 +26,11 @@ class Game {
     } else if (result === 1 || result === -2) {
       console.log("player1 wins")
       this.player1.wins ++;
+      this.player1.saveWinsToStorage();
     } else {
       console.log("player2 wins")
       this.player2.wins ++;
+      this.player2.saveWinsToStorage();
     }
   }
 
