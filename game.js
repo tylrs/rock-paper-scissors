@@ -18,7 +18,7 @@ class Game {
     displayFighters(this.player1Fighter, this.player2Fighter);
     displayWins(this.player1.wins, this.player2.wins);
     // displayRe
-    // this.resetBoard();
+    this.resetBoard();
   }
 
   checkWinner() {
@@ -50,8 +50,11 @@ class Game {
     var timeout = setTimeout(function() {
       this.player1Fighter = 0;
       this.player2Fighter = 0;
-      // return to homeview
-    }, 5000);
+      show(classicModeView);
+      hide(classicModeResults);
+      show(changeGameButton);
+      //change h2 subtitle
+    }, 3000);
     //showBack to choose game view
   }
 }

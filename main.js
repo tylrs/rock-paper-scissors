@@ -12,6 +12,8 @@ var figures = document.querySelectorAll('figure');
 var player1Choice = document.querySelector('#p1-choice');
 var player2Choice = document.querySelector('#p2-choice');
 
+var changeGameButton = document.querySelector('#changeGame');
+
 //MESS AROUND
 // console.log(figures)
 // console.log(figures[0]);
@@ -61,15 +63,22 @@ function displayFighters(p1Fighter, p2Fighter) {
       console.log("It's a draw");
       player1Choice.innerHTML += figures[i].outerHTML;
       player2Choice.innerHTML += figures[i].outerHTML;
+      displayWinnerMessage("Draw");
     } else if (parseInt(figures[i].id) === p1Fighter) {
       console.log("p1fighter working");
       console.log(figures[i]);
       player1Choice.innerHTML += figures[i].outerHTML;
+      displayWinnerMessage(`${currentGame.player1.name} is the winner.`);
     } else if (parseInt(figures[i].id) === p2Fighter) {
       console.log(figures[i]);
       player2Choice.innerHTML += figures[i].outerHTML;
+      displayWinnerMessage(`${currentGame.player2.name} is the winner.`);
     }
   }
+}
+
+function displayWinnerMessage(message) {
+  classicModeSubtitle.innerText = message;
 }
 
 function displayWins(player1Wins, player2Wins) {
