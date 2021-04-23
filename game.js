@@ -5,6 +5,8 @@ class Game {
     this.gameType = "classic";
     this.currentTurn = "player1";
     this.numTurns = 0;
+    this.player1Fighter = 0;
+    this.player2Fighter = 0;
   }
 
   playGame(userChoice) {
@@ -15,8 +17,8 @@ class Game {
   }
 
   checkWinner() {
-    var p1Fighter = this.player1.fighterChoice;
-    var p2Fighter = this.player2.fighterChoice;
+    var p1Fighter = this.player1Fighter;
+    var p2Fighter = this.player2Fighter;
     console.log("Player1>", p1Fighter, "player2>", p2Fighter)
     var result = p1Fighter - p2Fighter;
     if (!result) {

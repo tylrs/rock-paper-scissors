@@ -25,10 +25,10 @@ class Player {
   takeTurn(userChoice, game) {
     if (this.name === "Computer") {
       var number = getRandomNumber();
-      this.fighterChoice = number;
+      game.player2Fighter = number;
       game.currentTurn = "player1";
     } else {
-        this.fighterChoice = userChoice;
+        game.player1Fighter = userChoice;
         game.currentTurn = "player2";
     }
   }

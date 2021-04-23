@@ -8,7 +8,7 @@ var currentGame = new Game();
 
 //Event Listeners
 function runSample() {
-  currentGame.playGame(2);
+  currentGame.playGame(3);
 }
 
 //Other Functions
