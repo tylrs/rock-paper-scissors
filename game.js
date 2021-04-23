@@ -6,6 +6,7 @@ class Game {
     this.currentTurn = "player1";
     this.player1Fighter = 0;
     this.player2Fighter = 0;
+    this.winner = "";
   }
 
   playGame(userChoice) {
@@ -28,10 +29,12 @@ class Game {
       console.log("draw");
     } else if (result === 1 || result === -2) {
       console.log("human wins")
+      this.winner = this.player1.name;
       this.player1.wins ++;
       this.player1.saveWinsToStorage();
     } else {
       console.log("computer wins")
+      this.winner = this.player2.name;
       this.player2.wins ++;
       this.player2.saveWinsToStorage();
     }

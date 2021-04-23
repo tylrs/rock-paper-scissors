@@ -27,7 +27,7 @@ function showMode() {
   currentGame = new Game();
   hide(chooseGameView);
   show(classicModeView);
-  classicModeSubtitle.innerText = "Choose your fighter"
+  classicModeSubtitle.innerText = "Choose your fighter";
 }
 
 function startGame(event) {
