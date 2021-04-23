@@ -41,10 +41,6 @@ header {
   align-items: center;
 }
 
-.game-type:hover {
-  background-color: red;
-}
-
 .player-side {
   grid-column: 1;
   background-color: lightblue;
@@ -60,6 +56,11 @@ header {
   background-color: rgb(255,184,255);
   width: 45%;
   font-family: 'Press Start 2P', cursive;
+}
+
+.game-type:hover {
+  background-color: red;
+  cursor: pointer;
 }
 
 .player-side,
