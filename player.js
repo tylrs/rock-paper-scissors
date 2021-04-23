@@ -8,17 +8,17 @@ class Player {
 
   saveWinsToStorage() {
     var numWins = JSON.parse(localStorage.getItem(`${this.name}wins`));
-    if (!numWins) {
-      numWins = this.wins;
-      localStorage.setItem(`${this.name}wins`, JSON.stringify(numWins));
-      return;
-    }
-    numWins += this.wins;
+    numWins = this.wins;
     localStorage.setItem(`${this.name}wins`, JSON.stringify(numWins));
   }
 
   retrieveWinsFromStorage() {
     var numWins = JSON.parse(localStorage.getItem(`${this.name}wins`));
+    if (!numWins) {
+      numWins = this.wins;
+      localStorage.setItem(`${this.name}wins`, JSON.stringify(numWins));
+      return;
+    }
     this.wins = numWins;
   }
 

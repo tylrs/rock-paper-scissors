@@ -9,12 +9,13 @@ class Game {
   }
 
   playGame(userChoice) {
+    this.updateWins();
+    console.log(this.player1.wins);
     this.player1.takeTurn(userChoice, this);
     this.player2.takeTurn(userChoice, this);
     this.checkWinner();
     // displayResults
     this.resetBoard();
-    console.log(this);
   }
 
   checkWinner() {
@@ -35,13 +36,17 @@ class Game {
     }
   }
 
+  updateWins() {
+    this.player1.retrieveWinsFromStorage();
+    this.player2.retrieveWinsFromStorage();
+  }
+
   resetBoard() {
     var timeout = setTimeout(function() {
       this.player1Fighter = 0;
       this.player2Fighter = 0;
-      console.log("You lose");
       // return to homeview
     }, 5000);
-    //updateWins
+    //showBack to choose game view
   }
 }
