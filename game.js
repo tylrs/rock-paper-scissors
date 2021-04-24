@@ -19,7 +19,7 @@ class Game {
     displayWinnerMessage(this.winner);
     console.log(`p1wins> ${this.player1.wins}`, `p2wins> ${this.player2.wins}`);
     displayWins(this.player1.wins, this.player2.wins);
-    // this.resetBoard();
+    this.resetBoard();
   }
 
   checkWinner() {
@@ -53,11 +53,8 @@ class Game {
     var timeout = setTimeout(function() {
       this.player1Fighter = 0;
       this.player2Fighter = 0;
-      resetDOM();
-      show(classicModeView);
-      hide(classicModeResults);
-      show(changeGameButton);
-    }, 5000);
+      resetResultsDOM();
+    }, 3000);
     //showBack to choose game view
   }
 }

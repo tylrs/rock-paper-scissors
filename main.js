@@ -6,7 +6,7 @@ var classicModeButton = document.querySelector('#classicModeButton');
 var chooseGameView = document.querySelector('.choose-game');
 var classicModeView = document.querySelector('.classic-mode');
 var classicModeResults = document.querySelector('.classic-mode-results')
-var classicModeSubtitle = document.querySelector('.title h2')
+var headerSubtitle = document.querySelector('.title h2')
 var figures = document.querySelectorAll('figure');
 
 var player1Choice = document.querySelector('#p1-choice');
@@ -29,6 +29,7 @@ var currentGame;
 // window.addEventListener('click', runSample);
 classicModeButton.addEventListener('click', showMode);
 classicModeView.addEventListener('click', startGame);
+changeGameButton.addEventListener('click', showChooseGameView)
 
 //Event Handlers
 // function runSample() {
@@ -39,7 +40,7 @@ function showMode() {
   currentGame = new Game();
   hide(chooseGameView);
   show(classicModeView);
-  classicModeSubtitle.innerText = "Choose your fighter";
+  headerSubtitle.innerText = "Choose your fighter";
 }
 
 function startGame(event) {
@@ -47,6 +48,13 @@ function startGame(event) {
     var id = parseInt(event.target.closest('figure').id);
     currentGame.playGame(id);
   }
+}
+
+function showChooseGameView() {
+  show(chooseGameView);
+  hide(classicModeView);
+  hide(changeGameButton);
+  headerSubtitle.innerText = "Choose your game";
 }
 
 //Other Functions
@@ -73,18 +81,21 @@ function displayFighters(p1Fighter, p2Fighter) {
   }
 }
 
-function resetDOM() {
-  classicModeSubtitle.innerText = "Choose your fighter"
+function resetResultsDOM() {
+  headerSubtitle.innerText = "Choose your fighter"
   player1Choice.innerHTML = `<p>Player 1 Choice</p>`
   player2Choice.innerHTML = `<p>Player 2 Choice</p>`
+  show(classicModeView);
+  hide(classicModeResults);
+  show(changeGameButton);
 }
 
 function displayWinnerMessage(winner) {
   if (winner !== "Draw") {
-    classicModeSubtitle.innerText = `${winner} is the winner!`;
+    headerSubtitle.innerText = `${winner} is the winner!`;
     return;
   }
-    classicModeSubtitle.innerText = winner;
+    headerSubtitle.innerText = winner;
 }
 
 function displayWins(player1Wins, player2Wins) {
