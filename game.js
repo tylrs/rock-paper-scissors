@@ -50,10 +50,10 @@ class Game {
     var timeout = setTimeout(function() {
       this.player1Fighter = 0;
       this.player2Fighter = 0;
+      resetDOM();
       show(classicModeView);
       hide(classicModeResults);
       show(changeGameButton);
-      //change h2 subtitle
     }, 3000);
     //showBack to choose game view
   }

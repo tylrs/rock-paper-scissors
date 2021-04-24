@@ -77,6 +77,12 @@ function displayFighters(p1Fighter, p2Fighter) {
   }
 }
 
+function resetDOM() {
+  classicModeSubtitle.innerText = "Choose your fighter"
+  player1Choice.innerHTML = `<p>Player 1 Choice</p>`
+  player2Choice.innerHTML = `<p>Player 2 Choice<p>`
+}
+
 function displayWinnerMessage(message) {
   classicModeSubtitle.innerText = message;
 }
