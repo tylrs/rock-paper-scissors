@@ -12,8 +12,9 @@
       <div>
         <p class="emoji">🥶</p>
         <h2>Human</h2>
-        <h4>Wins: 0</h4>
+        <h4 id="humanWins">Wins: 0</h4>
       </div>
+      <button class="change-game-button hidden" id="changeGame">Change Game Type</button>
     </section>
     <main>
       <header>
@@ -22,42 +23,50 @@
           <h2>Choose your game</h2>
         </section>
       </header>
-      <section class="choose-game hidden">
-        <button class="game-type">
+      <section class="choose-game">
+        <button class="game-type" id="classicModeButton">
           <h3>CLASSIC</h3>
           <p>Rock > Scissors</p>
           <p>Scissors > Paper</p>
           <p>Paper > Rock</p>
         </button>
-        <button class="game-type">
+        <button class="game-type" id="variationMode">
           <h3>SPICY</h3>
           <p>Banana</p>
           <p>Banana</p>
           <p>Banana</p>
         </button>
       </section>
-      <section class="classic-mode">
-        <figure>
+      <section class="classic-mode hidden">
+        <figure id="3">
           <img src="./assets/wayla.jpg" alt="will + kayla">
           <figcaption>Wayla</figcaption>
         </figure>
-        <figure>
+        <figure id="2">
           <img src="./assets/heathill.jpg" alt="heather + will">
           <figcaption>Heathill</figcaption>
         </figure>
-        <figure>
+        <figure id="1">
           <img src="./assets/keather.jpg" alt="kayla + heather">
           <figcaption>Keather</figcaption>
         </figure>
       </section>
-      <section class="variation-mode">
+      <section class="classic-mode-results hidden">
+        <section class="player-choice" id="p1-choice">
+          <p>Player 1 Choice</p>
+        </section>
+        <section class="player-choice" id="p2-choice">
+          <p>Player 2 Choice</p>
+        </section>
+      </section>
+      <section class="variation-mode hidden">
       </section>
     </main>
     <section class="computer-side">
       <div>
         <p class="emoji">🖨</p>
         <h2>Computer</h2>
-        <h4>Wins: 0</h4>
+        <h4 id="computerWins">Wins: 0</h4>
       </div>
     </section>
   </body>

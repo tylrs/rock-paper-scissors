@@ -7,6 +7,7 @@ html {
   /* height: 100%; */
   /* width: 100%; */
   font-family: 'Press Start 2P', cursive;
+  /* color: rgb(214, 214, 214); */
 }
 
 body {
@@ -23,7 +24,7 @@ main {
   display: grid;
   grid-template-rows: 30% 70%;
   grid-template-columns: 100%;
-  background-color: pink;
+  background-color: purple;
 }
 
 header {
@@ -41,13 +42,24 @@ header {
   align-items: center;
 }
 
-.game-type:hover {
-  background-color: red;
-}
-
 .player-side {
   grid-column: 1;
   background-color: lightblue;
+}
+
+.change-game-button {
+  border-radius: 8%;
+  border: 1px solid grey;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 80%;
+  background-color: rgb(143, 193, 207);
+  margin: 11%;
+  padding: 2%;
+  cursor: pointer;
+}
+
+.change-game-button:hover {
+  background-color: rgb(190, 253, 255);
 }
 
 .computer-side {
@@ -62,6 +74,11 @@ header {
   font-family: 'Press Start 2P', cursive;
 }
 
+.game-type:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
 .player-side,
 .computer-side {
   padding-top: 5%;
@@ -71,11 +88,21 @@ header {
   font-size: 166%;
 }
 
-.classic-mode {
+.classic-mode,
+.classic-mode-results {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  /* align-items: center; */
   grid-row: 2;
+}
+
+.player-choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 50%;
 }
 
 figure {
@@ -88,6 +115,11 @@ figure {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.player-choice figure {
+  width: 65%;
+  height: 80%;
 }
 
 img {
@@ -104,6 +136,7 @@ img:hover {
 
 figcaption {
   padding-top: 5%;
+  cursor: pointer;
 }
 
  /* Show/hide */

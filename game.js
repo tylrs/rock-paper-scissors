@@ -6,6 +6,7 @@ class Game {
     this.currentTurn = "player1";
     this.player1Fighter = 0;
     this.player2Fighter = 0;
+    this.winner = "";
   }
 
   playGame(userChoice) {
@@ -14,7 +15,10 @@ class Game {
     this.player1.takeTurn(userChoice, this);
     this.player2.takeTurn(userChoice, this);
     this.checkWinner();
-    // displayResults
+    displayFighters(this.player1Fighter, this.player2Fighter);
+    displayWinnerMessage(this.winner);
+    console.log(`p1wins> ${this.player1.wins}`, `p2wins> ${this.player2.wins}`);
+    displayWins(this.player1.wins, this.player2.wins);
     this.resetBoard();
   }
 
@@ -25,12 +29,16 @@ class Game {
     var result = p1Fighter - p2Fighter;
     if (!result) {
       console.log("draw");
+      this.winner = "Draw";
     } else if (result === 1 || result === -2) {
-      console.log("player1 wins")
+      console.log("human wins")
+      this.winner = this.player1.name;
       this.player1.wins ++;
+      // console.log(this.player1.wins);
       this.player1.saveWinsToStorage();
     } else {
-      console.log("player2 wins")
+      console.log("computer wins")
+      this.winner = this.player2.name;
       this.player2.wins ++;
       this.player2.saveWinsToStorage();
     }
@@ -45,8 +53,8 @@ class Game {
     var timeout = setTimeout(function() {
       this.player1Fighter = 0;
       this.player2Fighter = 0;
-      // return to homeview
-    }, 5000);
+      resetResultsDOM();
+    }, 3000);
     //showBack to choose game view
   }
 }
