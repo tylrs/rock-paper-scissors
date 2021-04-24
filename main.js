@@ -23,6 +23,8 @@ var changeGameButton = document.querySelector('#changeGame');
 //Global Variables
 var currentGame;
 
+renderPreviousGameInfo();
+
 // currentGame.playGame(2);
 
 //Event Listeners
@@ -35,6 +37,13 @@ changeGameButton.addEventListener('click', showChooseGameView)
 // function runSample() {
 //   currentGame.playGame(3);
 // }
+
+function renderPreviousGameInfo() {
+  currentGame = new Game();
+  currentGame.player1.retrieveWinsFromStorage();
+  currentGame.player2.retrieveWinsFromStorage();
+  displayWins(currentGame.player1.wins, currentGame.player2.wins);
+}
 
 function showMode() {
   currentGame = new Game();
