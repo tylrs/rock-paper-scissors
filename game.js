@@ -19,8 +19,7 @@ class Game {
     displayWinnerMessage(this.winner);
     console.log(`p1wins> ${this.player1.wins}`, `p2wins> ${this.player2.wins}`);
     displayWins(this.player1.wins, this.player2.wins);
-
-    this.resetBoard();
+    // this.resetBoard();
   }
 
   checkWinner() {

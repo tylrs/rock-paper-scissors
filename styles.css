@@ -76,7 +76,7 @@ header {
 .classic-mode-results {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  /* align-items: center; */
   grid-row: 2;
 }
 
@@ -99,6 +99,11 @@ figure {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.player-choice figure {
+  width: 65%;
+  height: 80%;
 }
 
 img {
