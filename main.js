@@ -66,6 +66,7 @@ function getRandomNumber() {
 function displayFighters(p1Fighter, p2Fighter) {
   hide(classicModeView);
   show(classicModeResults);
+  hide(changeGameButton);
   for (var i = 0; i < figures.length; i ++) {
     if (parseInt(figures[i].id) === p1Fighter && parseInt(figures[i].id) === p2Fighter) {
       player1Choice.innerHTML += figures[i].outerHTML;
