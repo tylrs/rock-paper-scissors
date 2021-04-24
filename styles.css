@@ -46,6 +46,21 @@ header {
   background-color: lightblue;
 }
 
+.change-game-button {
+  border-radius: 8%;
+  border: 1px solid grey;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 80%;
+  background-color: rgb(143, 193, 207);
+  margin: 11%;
+  padding: 2%;
+  cursor: pointer;
+}
+
+.change-game-button:hover {
+  background-color: rgb(190, 253, 255);
+}
+
 .computer-side {
   grid-column: 3;
   background-color: lightblue;
