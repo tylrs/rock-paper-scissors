@@ -60,19 +60,15 @@ function displayFighters(p1Fighter, p2Fighter) {
   show(classicModeResults);
   for (var i = 0; i < figures.length; i ++) {
     if (parseInt(figures[i].id) === p1Fighter && parseInt(figures[i].id) === p2Fighter) {
-      console.log("It's a draw");
       player1Choice.innerHTML += figures[i].outerHTML;
       player2Choice.innerHTML += figures[i].outerHTML;
-      displayWinnerMessage("Draw");
+      // displayWinnerMessage("Draw");
     } else if (parseInt(figures[i].id) === p1Fighter) {
-      console.log("p1fighter working");
-      console.log(figures[i]);
       player1Choice.innerHTML += figures[i].outerHTML;
-      displayWinnerMessage(`${currentGame.player1.name} is the winner.`);
+      // displayWinnerMessage(`${currentGame.player1.name} is the winner.`);
     } else if (parseInt(figures[i].id) === p2Fighter) {
-      console.log(figures[i]);
       player2Choice.innerHTML += figures[i].outerHTML;
-      displayWinnerMessage(`${currentGame.player2.name} is the winner.`);
+      // displayWinnerMessage(`${currentGame.player2.name} is the winner.`);
     }
   }
 }
@@ -83,8 +79,12 @@ function resetDOM() {
   player2Choice.innerHTML = `<p>Player 2 Choice<p>`
 }
 
-function displayWinnerMessage(message) {
-  classicModeSubtitle.innerText = message;
+function displayWinnerMessage(winner) {
+  if (winner !== "Draw") {
+    classicModeSubtitle.innerText = `${winner} is the winner!`;
+    return;
+  }
+    classicModeSubtitle.innerText = winner;
 }
 
 function displayWins(player1Wins, player2Wins) {
