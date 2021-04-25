@@ -8,6 +8,16 @@ class Game {
     this.player1Fighter = 0;
     this.player2Fighter = 0;
     this.winner = "";
+    this.classic = [
+      {id: 3, src: "./assets/wayla.jpg", alt: "will + kayla", figCaption: "Wayla"},
+      {id: 2, src: "./assets/heathill.jpg", alt: "heather + will", figCaption: "Heathill"},
+      {id: 1, src: "./assets/keather.jpg", alt: "kayla + heather", figCaption: "Keather"}
+    ];
+    this.variation = [
+      {id: 3, src: "./assets/wayla.jpg", alt: "will + kayla", figCaption: "Wayla"},
+      {id: 2, src: "./assets/heathill.jpg", alt: "heather + will", figCaption: "Heathill"},
+      {id: 1, src: "./assets/keather.jpg", alt: "kayla + heather", figCaption: "Keather"}
+    ];
   }
 
   playGame(userChoice) {

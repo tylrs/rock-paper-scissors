@@ -41,7 +41,7 @@ changeGameButton.addEventListener('click', showChooseGameView)
 // }
 
 function renderPreviousGameInfo() {
-  currentGame = new Game();
+  currentGame = new Game("classic");
   currentGame.player1.retrieveWinsFromStorage();
   currentGame.player2.retrieveWinsFromStorage();
   displayWins(currentGame.player1.wins, currentGame.player2.wins);
@@ -50,9 +50,24 @@ function renderPreviousGameInfo() {
 function showMode(event) {
   var gameMode = event.target.closest('button').id;
   currentGame = new Game(gameMode);
+  renderFighterChoices(gameMode);
   hide(chooseGameView);
   show(classicModeView);
   headerSubtitle.innerText = "Choose your fighter";
+}
+
+function renderFighterChoices(gameMode) {
+  var fighterSelection = currentGame[gameMode];
+  for (var i = 0; i < fighterSelection.length; i++) {
+    console.log(fighterSelection[i].id);
+    classicModeView.innerHTML +=
+    `
+      <figure id="${fighterSelection[i].id}">
+        <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
+        <figcaption>"${fighterSelection[i].figCaption}"</figcaption>
+      </figure>
+    `
+  }
 }
 
 function startGame(event) {
@@ -93,6 +108,7 @@ function displayFighters(p1Fighter, p2Fighter) {
     }
   }
 }
+
 
 function resetResultsDOM() {
   headerSubtitle.innerText = "Choose your fighter"
