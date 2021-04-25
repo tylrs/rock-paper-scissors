@@ -64,7 +64,7 @@ function renderFighterSelection(gameMode) {
     `
       <figure id="${fighterSelection[i].id}">
         <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
-        <figcaption>"${fighterSelection[i].figCaption}"</figcaption>
+        <figcaption>${fighterSelection[i].figCaption}</figcaption>
       </figure>
     `
   }
@@ -101,14 +101,14 @@ function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
       `
         <figure id="${fighterSelection[i].id}">
           <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
-          <figcaption>"${fighterSelection[i].figCaption}"</figcaption>
+          <figcaption>${fighterSelection[i].figCaption}</figcaption>
         </figure>
       `
       player2Choice.innerHTML +=
       `
         <figure id="${fighterSelection[i].id}">
           <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
-          <figcaption>"${fighterSelection[i].figCaption}"</figcaption>
+          <figcaption>${fighterSelection[i].figCaption}</figcaption>
         </figure>
       `
     } else if (parseInt(fighterSelection[i].id) === p1Fighter) {
@@ -116,7 +116,7 @@ function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
       `
         <figure id="${fighterSelection[i].id}">
           <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
-          <figcaption>"${fighterSelection[i].figCaption}"</figcaption>
+          <figcaption>${fighterSelection[i].figCaption}</figcaption>
         </figure>
       `
     } else if (parseInt(fighterSelection[i].id) === p2Fighter) {
@@ -124,7 +124,7 @@ function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
       `
         <figure id="${fighterSelection[i].id}">
           <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
-          <figcaption>"${fighterSelection[i].figCaption}"</figcaption>
+          <figcaption>${fighterSelection[i].figCaption}</figcaption>
         </figure>
       `
     }
