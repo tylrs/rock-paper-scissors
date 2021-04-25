@@ -9,16 +9,16 @@ class Game {
     this.player2Fighter = 0;
     this.winner = "";
     this.classic = [
-      {id: 3, src: "./assets/kiff.png", alt: "jeff/will", figCaption: "Jill"},
+      {id: 3, src: "./assets/kimberly.png", alt: "jeff/kayla", figCaption: "Kimberly"},
       {id: 2, src: "./assets/heathill.jpg", alt: "heather/will", figCaption: "Heathill"},
-      {id: 1, src: "./assets/jill.png", alt: "kayla/heather", figCaption: "Keather"}
+      {id: 1, src: "./assets/weff.png", alt: "jeff/will", figCaption: "Weff"}
     ];
     this.variation = [
-      {id: 5, src: "./assets/kiff.png", alt: "kayla/jeff", figCaption: "Keff"},
+      {id: 5, src: "./assets/keff.png", alt: "kayla/jeff", figCaption: "Keff"},
       {id: 4, src: "./assets/taylor2.png", alt: "best coder ever", figCaption: "Taylor"},
-      {id: 3, src: "./assets/jill.png", alt: "jeff/will", figCaption: "Jill"},
+      {id: 3, src: "./assets/kimberly.png", alt: "jeff/kayla", figCaption: "Kimberly"},
       {id: 2, src: "./assets/heathill.jpg", alt: "heather/will", figCaption: "Heathill"},
-      {id: 1, src: "./assets/keather.jpg", alt: "kayla/heather", figCaption: "Keather"}
+      {id: 1, src: "./assets/weff.png", alt: "jeff/will", figCaption: "Weff"}
     ];
   }
 
