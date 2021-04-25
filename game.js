@@ -26,7 +26,8 @@ class Game {
     this.player1.takeTurn(userChoice, this);
     this.player2.takeTurn(userChoice, this);
     this.checkWinner();
-    displayFighters(this.player1Fighter, this.player2Fighter);
+    // displayFighters(this.player1Fighter, this.player2Fighter);
+    renderPlayerChoices(this.player1Fighter, this.player2Fighter, this.gameType);
     displayWinnerMessage(this.winner);
     console.log(`p1wins> ${this.player1.wins}`, `p2wins> ${this.player2.wins}`);
     displayWins(this.player1.wins, this.player2.wins);
