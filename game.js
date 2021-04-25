@@ -14,6 +14,7 @@ class Game {
       {id: 1, src: "./assets/keather.jpg", alt: "kayla + heather", figCaption: "Keather"}
     ];
     this.variation = [
+      {id: 5, src: "./assets/lizard.png", alt: "lizard", figCaption: "Lizard"},
       {id: 4, src: "./assets/cave.png", alt: "cave", figCaption: "Cave"},
       {id: 3, src: "./assets/wayla.jpg", alt: "will + kayla", figCaption: "Wayla"},
       {id: 2, src: "./assets/heathill.jpg", alt: "heather + will", figCaption: "Heathill"},
