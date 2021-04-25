@@ -35,7 +35,7 @@ main {
   display: grid;
   grid-template-rows: 30% 70%;
   grid-template-columns: 100%;
-  background-color: rgb(242,242,242);
+  background-color: rgb(192,192,192);
 }
 
 header {
@@ -60,10 +60,10 @@ header {
 
 .change-game-button {
   border-radius: 8%;
-  border: 1px solid grey;
+  border: 4px solid rgb(34,34,34);
   font-family: 'Press Start 2P', cursive;
   font-size: 80%;
-  background-color: rgb(143, 193, 207);
+  background-color: rgb(112, 237, 249);
   margin: 11%;
   padding: 2%;
   cursor: pointer;
@@ -79,7 +79,7 @@ header {
 }
 
 .game-type {
-  border: blue 1px solid;
+  border: 4px solid rgb(34,34,34);
   width: 45%;
   font-family: 'Press Start 2P', cursive;
 }
@@ -95,6 +95,14 @@ header {
 
 .variation {
   background-color: rgb(112,237,249);
+}
+
+.title {
+  height: 50%;
+  width:90%;
+  background-color: rgb(221,73,87);
+  border: 4px solid rgb(34,34,34);
+  border-radius: 5%;
 }
 
 .player-side,
@@ -148,6 +156,11 @@ img {
   border-radius: 5%;
 }
 
+div {
+  border: 4px solid rgb(34,34,34);
+  margin: 6%;
+}
+
 img:hover {
   width: 100%;
   height: 100%;
@@ -157,6 +170,14 @@ img:hover {
 figcaption {
   padding-top: 5%;
   cursor: pointer;
+}
+
+.computer-info {
+  background-color: rgb(112,237,249);
+}
+
+.human-info {
+  background-color: rgb(238,177,62);
 }
 
  /* Show/hide */
