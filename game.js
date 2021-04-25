@@ -9,16 +9,16 @@ class Game {
     this.player2Fighter = 0;
     this.winner = "";
     this.classic = [
-      {id: 3, src: "./assets/wayla.jpg", alt: "will + kayla", figCaption: "Wayla"},
-      {id: 2, src: "./assets/heathill.jpg", alt: "heather + will", figCaption: "Heathill"},
-      {id: 1, src: "./assets/keather.jpg", alt: "kayla + heather", figCaption: "Keather"}
+      {id: 3, src: "./assets/kiff.png", alt: "jeff/will", figCaption: "Jill"},
+      {id: 2, src: "./assets/heathill.jpg", alt: "heather/will", figCaption: "Heathill"},
+      {id: 1, src: "./assets/jill.png", alt: "kayla/heather", figCaption: "Keather"}
     ];
     this.variation = [
-      {id: 5, src: "./assets/lizard.png", alt: "lizard", figCaption: "Lizard"},
-      {id: 4, src: "./assets/cave.png", alt: "cave", figCaption: "Cave"},
-      {id: 3, src: "./assets/wayla.jpg", alt: "will + kayla", figCaption: "Wayla"},
-      {id: 2, src: "./assets/heathill.jpg", alt: "heather + will", figCaption: "Heathill"},
-      {id: 1, src: "./assets/keather.jpg", alt: "kayla + heather", figCaption: "Keather"}
+      {id: 5, src: "./assets/kiff.png", alt: "kayla/jeff", figCaption: "Keff"},
+      {id: 4, src: "./assets/taylor2.png", alt: "best coder ever", figCaption: "Taylor"},
+      {id: 3, src: "./assets/jill.png", alt: "jeff/will", figCaption: "Jill"},
+      {id: 2, src: "./assets/heathill.jpg", alt: "heather/will", figCaption: "Heathill"},
+      {id: 1, src: "./assets/keather.jpg", alt: "kayla/heather", figCaption: "Keather"}
     ];
   }
 
