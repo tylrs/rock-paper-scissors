@@ -2,7 +2,8 @@
 
 var humanWins = document.querySelector('#humanWins');
 var computerWins = document.querySelector('#computerWins');
-var classicModeButton = document.querySelector('#classicModeButton');
+var classicModeButton = document.querySelector('#classic');
+var varationModeButton = document.querySelector('#variation')
 var chooseGameView = document.querySelector('.choose-game');
 var classicModeView = document.querySelector('.classic-mode');
 var classicModeResults = document.querySelector('.classic-mode-results')
@@ -30,6 +31,7 @@ renderPreviousGameInfo();
 //Event Listeners
 // window.addEventListener('click', runSample);
 classicModeButton.addEventListener('click', showMode);
+varationModeButton.addEventListener('click', showMode)
 classicModeView.addEventListener('click', startGame);
 changeGameButton.addEventListener('click', showChooseGameView)
 
@@ -39,17 +41,33 @@ changeGameButton.addEventListener('click', showChooseGameView)
 // }
 
 function renderPreviousGameInfo() {
-  currentGame = new Game();
+  currentGame = new Game("classic");
   currentGame.player1.retrieveWinsFromStorage();
   currentGame.player2.retrieveWinsFromStorage();
   displayWins(currentGame.player1.wins, currentGame.player2.wins);
 }
 
-function showMode() {
-  currentGame = new Game();
+function showMode(event) {
+  var gameMode = event.target.closest('button').id;
+  currentGame = new Game(gameMode);
+  renderFighterSelection(gameMode);
   hide(chooseGameView);
   show(classicModeView);
   headerSubtitle.innerText = "Choose your fighter";
+}
+
+function renderFighterSelection(gameMode) {
+  var fighterSelection = currentGame[gameMode];
+  classicModeView.innerHTML = "";
+  for (var i = 0; i < fighterSelection.length; i++) {
+    classicModeView.innerHTML +=
+    `
+      <figure id="${fighterSelection[i].id}">
+        <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
+        <figcaption>${fighterSelection[i].figCaption}</figcaption>
+      </figure>
+    `
+  }
 }
 
 function startGame(event) {
@@ -67,29 +85,72 @@ function showChooseGameView() {
 }
 
 //Other Functions
-function getRandomNumber() {
-  var number = Math.floor(Math.random() * (4-1) + 1);
+function getRandomNumber(max) {
+  var number = Math.floor(Math.random() * (max-1) + 1);
   return number;
 }
 
-function displayFighters(p1Fighter, p2Fighter) {
+function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
   hide(classicModeView);
   show(classicModeResults);
   hide(changeGameButton);
-  for (var i = 0; i < figures.length; i ++) {
-    if (parseInt(figures[i].id) === p1Fighter && parseInt(figures[i].id) === p2Fighter) {
-      player1Choice.innerHTML += figures[i].outerHTML;
-      player2Choice.innerHTML += figures[i].outerHTML;
-      // displayWinnerMessage("Draw");
-    } else if (parseInt(figures[i].id) === p1Fighter) {
-      player1Choice.innerHTML += figures[i].outerHTML;
-      // displayWinnerMessage(`${currentGame.player1.name} is the winner.`);
-    } else if (parseInt(figures[i].id) === p2Fighter) {
-      player2Choice.innerHTML += figures[i].outerHTML;
-      // displayWinnerMessage(`${currentGame.player2.name} is the winner.`);
+  var fighterSelection = currentGame[gameMode];
+  for (var i = 0; i < fighterSelection.length; i++) {
+    if (parseInt(fighterSelection[i].id) === p1Fighter && parseInt(fighterSelection[i].id) === p2Fighter) {
+      player1Choice.innerHTML +=
+      `
+        <figure id="${fighterSelection[i].id}">
+          <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
+          <figcaption>${fighterSelection[i].figCaption}</figcaption>
+        </figure>
+      `
+      player2Choice.innerHTML +=
+      `
+        <figure id="${fighterSelection[i].id}">
+          <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
+          <figcaption>${fighterSelection[i].figCaption}</figcaption>
+        </figure>
+      `
+    } else if (parseInt(fighterSelection[i].id) === p1Fighter) {
+      player1Choice.innerHTML +=
+      `
+        <figure id="${fighterSelection[i].id}">
+          <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
+          <figcaption>${fighterSelection[i].figCaption}</figcaption>
+        </figure>
+      `
+    } else if (parseInt(fighterSelection[i].id) === p2Fighter) {
+      player2Choice.innerHTML +=
+      `
+        <figure id="${fighterSelection[i].id}">
+          <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
+          <figcaption>${fighterSelection[i].figCaption}</figcaption>
+        </figure>
+      `
     }
   }
 }
+
+// function displayFighters(p1Fighter, p2Fighter) {
+//   hide(classicModeView);
+//   show(classicModeResults);
+//   hide(changeGameButton);
+//   var figures = document.querySelectorAll('figure')
+//   for (var i = 0; i < figures.length; i ++) {
+//     if (parseInt(figures[i].id) === p1Fighter && parseInt(figures[i].id) === p2Fighter) {
+//       player1Choice.innerHTML += figures[i].outerHTML;
+//       player2Choice.innerHTML += figures[i].outerHTML;
+//       // displayWinnerMessage("Draw");
+//     } else if (parseInt(figures[i].id) === p1Fighter) {
+//       player1Choice.innerHTML += figures[i].outerHTML;
+//       // displayWinnerMessage(`${currentGame.player1.name} is the winner.`);
+//     } else if (parseInt(figures[i].id) === p2Fighter) {
+//       player2Choice.innerHTML += figures[i].outerHTML;
+//       // displayWinnerMessage(`${currentGame.player2.name} is the winner.`);
+//     }
+//   }
+// }
+
 
 function resetResultsDOM() {
   headerSubtitle.innerText = "Choose your fighter"

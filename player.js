@@ -24,7 +24,7 @@ class Player {
 
   takeTurn(userChoice, game) {
     if (this.name === "Computer") {
-      var number = getRandomNumber();
+      var number = getRandomNumber(game.gameTypeNum);
       game.player2Fighter = number;
       game.currentTurn = "player1";
     } else {
