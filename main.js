@@ -58,6 +58,7 @@ function showMode(event) {
 
 function renderFighterSelection(gameMode) {
   var fighterSelection = currentGame[gameMode];
+  classicModeView.innerHTML = "";
   for (var i = 0; i < fighterSelection.length; i++) {
     classicModeView.innerHTML +=
     `
