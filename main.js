@@ -67,8 +67,8 @@ function showChooseGameView() {
 }
 
 //Other Functions
-function getRandomNumber() {
-  var number = Math.floor(Math.random() * (4-1) + 1);
+function getRandomNumber(max) {
+  var number = Math.floor(Math.random() * (max-1) + 1);
   return number;
 }
 
