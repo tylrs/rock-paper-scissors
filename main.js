@@ -3,6 +3,7 @@
 var humanWins = document.querySelector('#humanWins');
 var computerWins = document.querySelector('#computerWins');
 var classicModeButton = document.querySelector('#classic');
+var varationModeButton = document.querySelector('#variation')
 var chooseGameView = document.querySelector('.choose-game');
 var classicModeView = document.querySelector('.classic-mode');
 var classicModeResults = document.querySelector('.classic-mode-results')
@@ -30,6 +31,7 @@ renderPreviousGameInfo();
 //Event Listeners
 // window.addEventListener('click', runSample);
 classicModeButton.addEventListener('click', showMode);
+varationModeButton.addEventListener('click', showMode)
 classicModeView.addEventListener('click', startGame);
 changeGameButton.addEventListener('click', showChooseGameView)
 
