@@ -94,6 +94,7 @@ header {
   justify-content: space-around;
   /* align-items: center; */
   grid-row: 2;
+  /* flex-wrap: wrap; */
 }
 
 .player-choice {
