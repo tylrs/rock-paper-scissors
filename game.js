@@ -1,6 +1,6 @@
 class Game {
   constructor(gameMode) {
-    this.player1 = new Player("Taylor", "🤓");
+    this.player1 = new Player("Human", "🤓");
     this.player2 = new Player("Computer", "📟");
     (gameMode === "classic") ? this.gameTypeNum = 4 : this.gameTypeNum = 6;
     this.gameType = gameMode;
@@ -10,14 +10,14 @@ class Game {
     this.winner = "";
     this.classic = [
       {id: 3, src: "./assets/kimberly.png", alt: "jeff/kayla", figCaption: "Kimberly"},
-      {id: 2, src: "./assets/heathill.jpg", alt: "heather/will", figCaption: "Heathill"},
+      {id: 2, src: "./assets/willther.jpg", alt: "heather/will", figCaption: "Willther"},
       {id: 1, src: "./assets/weff.png", alt: "jeff/will", figCaption: "Weff"}
     ];
     this.variation = [
       {id: 5, src: "./assets/keff.png", alt: "kayla/jeff", figCaption: "Keff"},
       {id: 4, src: "./assets/taylor2.png", alt: "best coder ever", figCaption: "Taylor"},
       {id: 3, src: "./assets/kimberly.png", alt: "jeff/kayla", figCaption: "Kimberly"},
-      {id: 2, src: "./assets/heathill.jpg", alt: "heather/will", figCaption: "Heathill"},
+      {id: 2, src: "./assets/willther.jpg", alt: "heather/will", figCaption: "Willther"},
       {id: 1, src: "./assets/weff.png", alt: "jeff/will", figCaption: "Weff"}
     ];
   }

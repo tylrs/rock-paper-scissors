@@ -154,8 +154,8 @@ function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
 
 function resetResultsDOM() {
   headerSubtitle.innerText = "Choose your fighter"
-  player1Choice.innerHTML = `<p>Player 1 Choice</p>`
-  player2Choice.innerHTML = `<p>Player 2 Choice</p>`
+  player1Choice.innerHTML = `<p>Human Choice</p>`
+  player2Choice.innerHTML = `<p>Computer Choice</p>`
   show(classicModeView);
   hide(classicModeResults);
   show(changeGameButton);
