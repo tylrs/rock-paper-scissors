@@ -81,7 +81,7 @@ function showChooseGameView() {
   show(chooseGameView);
   hide(classicModeView);
   hide(changeGameButton);
-  headerSubtitle.innerText = "Choose your game";
+  headerSubtitle.innerText = "Unlock your potential";
 }
 
 //Other Functions
