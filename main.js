@@ -2,7 +2,7 @@
 
 var humanWins = document.querySelector('#humanWins');
 var computerWins = document.querySelector('#computerWins');
-var classicModeButton = document.querySelector('#classicModeButton');
+var classicModeButton = document.querySelector('#classic');
 var chooseGameView = document.querySelector('.choose-game');
 var classicModeView = document.querySelector('.classic-mode');
 var classicModeResults = document.querySelector('.classic-mode-results')
@@ -45,8 +45,9 @@ function renderPreviousGameInfo() {
   displayWins(currentGame.player1.wins, currentGame.player2.wins);
 }
 
-function showMode() {
-  currentGame = new Game();
+function showMode(event) {
+  var gameMode = event.target.closest('button').id;
+  currentGame = new Game(gameMode);
   hide(chooseGameView);
   show(classicModeView);
   headerSubtitle.innerText = "Choose your fighter";

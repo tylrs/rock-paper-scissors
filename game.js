@@ -1,9 +1,9 @@
 class Game {
-  constructor() {
+  constructor(gameMode) {
     this.player1 = new Player("Taylor", "🤓");
     this.player2 = new Player("Computer", "📟");
-    this.gameType = "variation";
-    this.gameTypeNum = 6;
+    (gameMode === "classic") ? this.gameTypeNum = 4 : this.gameTypeNum = 6;
+    this.gameType = gameMode;
     this.currentTurn = "player1";
     this.player1Fighter = 0;
     this.player2Fighter = 0;
@@ -13,8 +13,8 @@ class Game {
   playGame(userChoice) {
     this.updateWins();
     console.log(this.player1.wins);
-    this.player1.takeTurn(userChoice, this.gameTypeNum);
-    this.player2.takeTurn(userChoice, this.gameTypeNum);
+    this.player1.takeTurn(userChoice, this);
+    this.player2.takeTurn(userChoice, this);
     this.checkWinner();
     displayFighters(this.player1Fighter, this.player2Fighter);
     displayWinnerMessage(this.winner);
