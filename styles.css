@@ -122,6 +122,10 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("./assets/turingLogo.png");
+  background-position: 50% 90%;
+  background-repeat: no-repeat;
+  background-size: 55% 20%;
 }
 
 .emoji {
@@ -162,7 +166,7 @@ figure {
   height: 80%;
 }
 
-img {
+.fighter {
   width: 90%;
   height: 84%;
   border-radius: 5%;
@@ -179,7 +183,7 @@ div > h2 {
   font-size: 120%;
 }
 
-img:hover {
+.fighter:hover {
   width: 90%;
   height: 90%;
   cursor: pointer;

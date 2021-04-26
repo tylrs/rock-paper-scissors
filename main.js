@@ -54,7 +54,7 @@ function renderFighterSelection(gameMode) {
     gameBoardView.innerHTML +=
     `
       <figure id="${fighterSelection[i].id}">
-        <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
+        <img class="fighter" src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
         <figcaption>${fighterSelection[i].figCaption}</figcaption>
       </figure>
     `
@@ -84,14 +84,14 @@ function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
       player1Choice.innerHTML +=
       `
         <figure id="${fighterSelection[i].id}">
-          <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
+          <img class="fighter" src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
           <figcaption>${fighterSelection[i].figCaption}</figcaption>
         </figure>
       `
       player2Choice.innerHTML +=
       `
         <figure id="${fighterSelection[i].id}">
-          <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
+          <img class="fighter" src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
           <figcaption>${fighterSelection[i].figCaption}</figcaption>
         </figure>
       `
@@ -99,7 +99,7 @@ function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
       player1Choice.innerHTML +=
       `
         <figure id="${fighterSelection[i].id}">
-          <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
+          <img class="fighter" src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
           <figcaption>${fighterSelection[i].figCaption}</figcaption>
         </figure>
       `
@@ -107,7 +107,7 @@ function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
       player2Choice.innerHTML +=
       `
         <figure id="${fighterSelection[i].id}">
-          <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
+          <img class="fighter" src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
           <figcaption>${fighterSelection[i].figCaption}</figcaption>
         </figure>
       `
