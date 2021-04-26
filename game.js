@@ -1,6 +1,6 @@
 class Game {
   constructor(gameMode) {
-    this.player1 = new Player("Human", "🤓");
+    this.player1 = new Player("You", "🤓");
     this.player2 = new Player("Computer", "📟");
     (gameMode === "classic") ? this.gameTypeNum = 4 : this.gameTypeNum = 6;
     this.gameType = gameMode;

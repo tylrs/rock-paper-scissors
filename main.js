@@ -18,8 +18,6 @@ var changeGameButton = document.querySelector('#changeGame');
 //Global Variables
 var currentGame;
 
-// renderPreviousGameInfo();
-
 //Event Listeners
 window.addEventListener('DOMContentLoaded', renderPreviousGameInfo)
 classicModeButton.addEventListener('click', showMode);
@@ -120,7 +118,7 @@ function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
 
 function resetResultsDOM() {
   headerSubtitle.innerText = "Choose your fighter"
-  player1Choice.innerHTML = `<p>Human Choice</p>`
+  player1Choice.innerHTML = `<p>Your Choice</p>`
   player2Choice.innerHTML = `<p>Computer Choice</p>`
   show(classicModeView);
   hide(classicModeResults);
@@ -128,11 +126,15 @@ function resetResultsDOM() {
 }
 
 function displayWinnerMessage(winner) {
-  if (winner !== "Draw") {
+  if (winner === "You") {
+    headerSubtitle.innerText = `${winner} are the winner!`;
+    return;
+  } else if (winner !== "Draw") {
     headerSubtitle.innerText = `${winner} is the winner!`;
     return;
-  }
+  } else {
     headerSubtitle.innerText = winner;
+  }
 }
 
 function displayWins(player1Wins, player2Wins) {
