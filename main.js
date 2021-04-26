@@ -127,10 +127,8 @@ function resetResultsDOM() {
 function displayWinnerMessage(winner) {
   if (winner === "You") {
     headerSubtitle.innerText = `${winner} are the winner!`;
-    return;
   } else if (winner !== "Draw") {
     headerSubtitle.innerText = `${winner} is the winner!`;
-    return;
   } else {
     headerSubtitle.innerText = winner;
   }
