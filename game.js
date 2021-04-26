@@ -15,7 +15,7 @@ class Game {
     ];
     this.variation = [
       {id: 5, src: "./assets/keff.png", alt: "kayla/jeff", figCaption: "Keff"},
-      {id: 4, src: "./assets/taylor2.png", alt: "best coder ever", figCaption: "Taylor"},
+      {id: 4, src: "./assets/taylor2.png", alt: "best coder ever", figCaption: "Student"},
       {id: 3, src: "./assets/kimberly.png", alt: "jeff/kayla", figCaption: "Kimberly"},
       {id: 2, src: "./assets/willther.jpg", alt: "heather/will", figCaption: "Willther"},
       {id: 1, src: "./assets/weff.png", alt: "jeff/will", figCaption: "Weff"}
