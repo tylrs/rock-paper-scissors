@@ -28,8 +28,8 @@ class Player {
       game.player2Fighter = number;
       game.currentTurn = "player1";
     } else {
-        game.player1Fighter = userChoice;
-        game.currentTurn = "player2";
+      game.player1Fighter = userChoice;
+      game.currentTurn = "player2";
     }
   }
 }

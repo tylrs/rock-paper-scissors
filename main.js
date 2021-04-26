@@ -5,8 +5,8 @@ var computerWins = document.querySelector('#computerWins');
 var classicModeButton = document.querySelector('#classic');
 var varationModeButton = document.querySelector('#variation')
 var chooseGameView = document.querySelector('.choose-game');
-var classicModeView = document.querySelector('.classic-mode');
-var classicModeResults = document.querySelector('.classic-mode-results')
+var gameBoardView = document.querySelector('.game-board');
+var gameBoardResults = document.querySelector('.game-board-results')
 var headerSubtitle = document.querySelector('.title h2')
 var figures = document.querySelectorAll('figure');
 
@@ -22,7 +22,7 @@ var currentGame;
 window.addEventListener('DOMContentLoaded', renderPreviousGameInfo)
 classicModeButton.addEventListener('click', showMode);
 varationModeButton.addEventListener('click', showMode)
-classicModeView.addEventListener('click', startGame);
+gameBoardView.addEventListener('click', startGame);
 changeGameButton.addEventListener('click', showChooseGameView)
 
 function renderPreviousGameInfo() {
@@ -37,15 +37,15 @@ function showMode(event) {
   currentGame = new Game(gameMode);
   renderFighterSelection(gameMode);
   hide(chooseGameView);
-  show(classicModeView);
+  show(gameBoardView);
   headerSubtitle.innerText = "Choose your fighter";
 }
 
 function renderFighterSelection(gameMode) {
   var fighterSelection = currentGame[gameMode];
-  classicModeView.innerHTML = "";
+  gameBoardView.innerHTML = "";
   for (var i = 0; i < fighterSelection.length; i++) {
-    classicModeView.innerHTML +=
+    gameBoardView.innerHTML +=
     `
       <figure id="${fighterSelection[i].id}">
         <img src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
@@ -64,7 +64,7 @@ function startGame(event) {
 
 function showChooseGameView() {
   show(chooseGameView);
-  hide(classicModeView);
+  hide(gameBoardView);
   hide(changeGameButton);
   headerSubtitle.innerText = "Unlock your potential";
 }
@@ -76,8 +76,8 @@ function getRandomNumber(max) {
 }
 
 function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
-  hide(classicModeView);
-  show(classicModeResults);
+  hide(gameBoardView);
+  show(gameBoardResults);
   hide(changeGameButton);
   var fighterSelection = currentGame[gameMode];
   for (var i = 0; i < fighterSelection.length; i++) {
@@ -120,8 +120,8 @@ function resetResultsDOM() {
   headerSubtitle.innerText = "Choose your fighter"
   player1Choice.innerHTML = `<p>Your Choice</p>`
   player2Choice.innerHTML = `<p>Computer Choice</p>`
-  show(classicModeView);
-  hide(classicModeResults);
+  show(gameBoardView);
+  hide(gameBoardResults);
   show(changeGameButton);
 }
 

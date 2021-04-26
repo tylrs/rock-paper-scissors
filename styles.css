@@ -1,4 +1,4 @@
-/* Colors */
+game-board/* Colors */
 /*
 Blue rgb(112,237,249)
 White rgb(255,255,255)
@@ -149,8 +149,8 @@ li {
   font-size: 166%;
 }
 
-.classic-mode,
-.classic-mode-results {
+.game-board,
+.game-board-results {
   display: flex;
   justify-content: space-around;
   grid-column: 1/2;
