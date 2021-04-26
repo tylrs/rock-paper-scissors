@@ -2,16 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Rock, Paper, Scissors</title>
+    <title>Turing Teachers Tussle</title>
     <link href="./styles.css" type="text/css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   </head>
   <body>
     <section class="player-side">
-      <div>
+      <div class="human-info">
         <p class="emoji">🥶</p>
-        <h2>Human</h2>
+        <h2>You</h2>
         <h4 id="humanWins">Wins: 0</h4>
       </div>
       <button class="change-game-button hidden" id="changeGame">Change Game Type</button>
@@ -19,22 +19,30 @@
     <main>
       <header>
         <section class="title">
-          <h1>Tangled Turing Teachers Tussle</h1>
-          <h2>Choose your game</h2>
+          <h1>Turing Teachers Tussle</h1>
+          <h2>Unlock Your Potential</h2>
         </section>
       </header>
       <section class="choose-game">
-        <button class="game-type" id="classic">
-          <h3>CLASSIC</h3>
-          <p>Wayla wails on Heathill</p>
-          <p>Heathill heats up Keather</p>
-          <p>Keather Kleats Wayla</p>
+        <button class="game-type classic" id="classic">
+          <h3>CLASSIC MODE</h3>
+          <ul>
+            <p>Rules:</p>
+            <li>Kimberly whacks Willther</li>
+            <li>Willther tricks Weff</li>
+            <li>Weff whiffs Kimberly</li>
+          </ul>
         </button>
-        <button class="game-type" id="variation">
-          <h3>SPICY</h3>
-          <p>Placeholder</p>
-          <p>Placeholder</p>
-          <p>Placeholder</p>
+        <button class="game-type variation" id="variation">
+          <h3>VARIATION MODE</h3>
+          <ul>
+            <p>Rules:</p>
+            <li>Keff kicks Student/Kimberly</li>
+            <li>Student spin kicks Kimberly/Willther</li>
+            <li>Kimberly whacks Willther/Weff</li>
+            <li>Willther tricks Weff/Keff</li>
+            <li>Weff whiffs Keff/Student</li>
+          </ul>
         </button>
       </section>
       <section class="classic-mode hidden">
@@ -53,17 +61,15 @@
       </section>
       <section class="classic-mode-results hidden">
         <section class="player-choice" id="p1-choice">
-          <p>Player 1 Choice</p>
+          <p>Your Choice</p>
         </section>
         <section class="player-choice" id="p2-choice">
-          <p>Player 2 Choice</p>
+          <p>Computer Choice</p>
         </section>
-      </section>
-      <section class="variation-mode hidden">
       </section>
     </main>
     <section class="computer-side">
-      <div>
+      <div class="computer-info">
         <p class="emoji">🖨</p>
         <h2>Computer</h2>
         <h4 id="computerWins">Wins: 0</h4>
