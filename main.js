@@ -18,9 +18,10 @@ var changeGameButton = document.querySelector('#changeGame');
 //Global Variables
 var currentGame;
 
-renderPreviousGameInfo();
+// renderPreviousGameInfo();
 
 //Event Listeners
+window.addEventListener('DOMContentLoaded', renderPreviousGameInfo)
 classicModeButton.addEventListener('click', showMode);
 varationModeButton.addEventListener('click', showMode)
 classicModeView.addEventListener('click', startGame);
