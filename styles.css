@@ -1,24 +1,6 @@
-game-board/* Colors */
-/*
-Blue rgb(112,237,249)
-White rgb(255,255,255)
-Black rgb(34,34,34)
-Yellow rgb(238,177,62)
-Red rgb(221,73,87)
-LightGrey rgb(242,242,242)
-DarkGrey rgb(227,226,226)
- */
-
 /* Default */
-* {
-  /* border: solid blue 1px; */
-}
-
 html {
-  /* height: 100%; */
-  /* width: 100%; */
   font-family: 'Press Start 2P', cursive;
-  /* color: rgb(214, 214, 214); */
 }
 
 body {
@@ -37,7 +19,6 @@ main {
   grid-template-columns: 100%;
   background-color: rgb(192,192,192);
   overflow-y: hidden;
-  /* background-color: rgb(34,34,34); */
 }
 
 header {
@@ -77,7 +58,6 @@ header {
 .computer-side {
   grid-column: 3;
   background-color: rgb(109,109,113);
-  /* background-color: rgb(34,34,34); */
 }
 
 .game-type {
@@ -141,7 +121,6 @@ li {
   padding-top: 5%;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -154,7 +133,6 @@ li {
   display: flex;
   justify-content: space-around;
   grid-column: 1/2;
-  /* align-items: center; */
   grid-row: 2;
   flex-wrap: wrap;
 }
@@ -173,7 +151,6 @@ figure {
   height: 45%;
   margin: 0;
   font-size:100%;
-  /* padding: 2%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -194,23 +171,13 @@ img {
 
 div {
   border: 4px solid rgb(34,34,34);
-  /* margin: 6%; */
   height: 30%;
   width: 80%;
-}
-
-div > * {
-
-  /* margin: 5%; */
 }
 
 div > h2 {
   font-size: 120%;
 }
-
-/* fiv > h3 {
-  font-size:
-} */
 
 img:hover {
   width: 90%;
@@ -225,14 +192,10 @@ figcaption {
 
 .computer-info {
   background-color: rgb(112,237,249);
-  /* margin: 6%; */
-  /* margin-left: 4%; */
 }
 
 .human-info {
   background-color: rgb(238,177,62);
-  /* margin-right: 4%; */
-  /* margin: 6%; */
 }
 
  /* Show/hide */

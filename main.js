@@ -1,5 +1,4 @@
 //DOM elements
-
 var humanWins = document.querySelector('#humanWins');
 var computerWins = document.querySelector('#computerWins');
 var classicModeButton = document.querySelector('#classic');
@@ -41,6 +40,13 @@ function showMode(event) {
   headerSubtitle.innerText = "Choose your fighter";
 }
 
+function startGame(event) {
+  if (event.target.closest('figure')) {
+    var id = parseInt(event.target.closest('figure').id);
+    currentGame.playGame(id);
+  }
+}
+
 function renderFighterSelection(gameMode) {
   var fighterSelection = currentGame[gameMode];
   gameBoardView.innerHTML = "";
@@ -52,13 +58,6 @@ function renderFighterSelection(gameMode) {
         <figcaption>${fighterSelection[i].figCaption}</figcaption>
       </figure>
     `
-  }
-}
-
-function startGame(event) {
-  if (event.target.closest('figure')) {
-    var id = parseInt(event.target.closest('figure').id);
-    currentGame.playGame(id);
   }
 }
 
