@@ -2,7 +2,7 @@
 var humanWins = document.querySelector('#humanWins');
 var computerWins = document.querySelector('#computerWins');
 var classicModeButton = document.querySelector('#classic');
-var variationModeButton = document.querySelector('#variation')
+var variationModeButton = document.querySelector('#variation');
 var chooseGameView = document.querySelector('.choose-game');
 var gameBoardView = document.querySelector('.game-board');
 var gameBoardResults = document.querySelector('.game-board-results')
@@ -10,7 +10,6 @@ var headerSubtitle = document.querySelector('.title h2')
 var figures = document.querySelectorAll('figure');
 var player1Choice = document.querySelector('#p1-choice');
 var player2Choice = document.querySelector('#p2-choice');
-
 var changeGameButton = document.querySelector('#changeGame');
 
 //Global Variables
@@ -18,8 +17,7 @@ var currentGame;
 
 //Event Listeners
 window.addEventListener('DOMContentLoaded', renderPreviousGameInfo)
-classicModeButton.addEventListener('click', showMode);
-variationModeButton.addEventListener('click', showMode);
+chooseGameView.addEventListener('click', showMode);
 gameBoardView.addEventListener('click', runGame);
 changeGameButton.addEventListener('click', showChooseGameView);
 
@@ -31,12 +29,14 @@ function renderPreviousGameInfo() {
 }
 
 function showMode(event) {
-  var gameMode = event.target.closest('button').id;
-  currentGame = new Game(gameMode);
-  renderFighterSelection(gameMode);
-  hide(chooseGameView);
-  show(gameBoardView);
-  headerSubtitle.innerText = "Choose your fighter";
+  if (event.target.closest('button')) {
+    var gameMode = event.target.closest('button').id;
+    currentGame = new Game(gameMode);
+    renderFighterSelection(gameMode);
+    hide(chooseGameView);
+    show(gameBoardView);
+    headerSubtitle.innerText = "Choose your fighter";
+  }
 }
 
 function runGame(event) {
