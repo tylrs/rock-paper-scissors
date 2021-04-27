@@ -202,17 +202,18 @@ figcaption {
 	cursor: pointer;
 	height: 90%;
 	width: 100%;
-	animation: dance .5s;
+	animation: dance .3s;
 	animation-iteration-count: infinite;
+	box-shadow: 5px 10px 18px rgb(255, 243, 173);
 }
 
 @keyframes dance {
-  0% { transform: translate(2px, 2px) rotate(1deg); box-shadow: 5px 10px 18px rgb(255, 243, 173)}
-  20% { transform: translate(-3px, 0px) rotate(-1deg); box-shadow: 5px 10px 18px rgb(219, 13, 96)}
-  40% { transform: translate(2px, -2px) rotate(2deg); box-shadow: 5px 10px 18px rgb(255, 243, 173)}
-  60% { transform: translate(-3px, 2px) rotate(1deg); box-shadow: 5px 10px 18px rgb(219, 13, 96)}
-  80% { transform: translate(-2px, -2px) rotate(-1deg); box-shadow: 5px 10px 18px rgb(255, 243, 173)}
-  100% { transform: translate(2px, -2px) rotate(2deg); box-shadow: 5px 10px 18px rgb(219, 13, 96)}
+  0% { transform: translate(2px, 2px) rotate(1deg);}
+  20% { transform: translate(-3px, 0px) rotate(-1deg);}
+  40% { transform: translate(2px, -2px) rotate(2deg);}
+  60% { transform: translate(-3px, 2px) rotate(1deg);}
+  80% { transform: translate(-2px, -2px) rotate(-1deg);}
+  100% { transform: translate(2px, -2px) rotate(2deg);}
 }
 
 .player-choice .fighter {

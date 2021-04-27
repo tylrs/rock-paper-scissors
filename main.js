@@ -66,15 +66,15 @@ function displayGame() {
 function renderPlayerInfo() {
   player1Info.innerHTML =
   `
-    <p class="emoji">${currentGame.player1.emoji}</p>
+    <h2 class="emoji">${currentGame.player1.emoji}</h2>
     <h2>${currentGame.player1.name}</h2>
-    <h4 id="humanWins">Wins: ${currentGame.player1.wins}</h4>
+    <h3 id="humanWins">Wins: ${currentGame.player1.wins}</h3>
   `
   player2Info.innerHTML =
   `
-    <p class="emoji">${currentGame.player2.emoji}</p>
+    <h2 class="emoji">${currentGame.player2.emoji}</h2>
     <h2>${currentGame.player2.name}</h2>
-    <h4 id="computerWins">Wins: ${currentGame.player2.wins}</h4>
+    <h3 id="computerWins">Wins: ${currentGame.player2.wins}</h3>
   `
 }
 
