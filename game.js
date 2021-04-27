@@ -39,7 +39,7 @@ class Game {
       this.winner = this.player1.name;
       this.player1.wins ++;
       this.player1.saveWinsToStorage();
-    } else if (this.gameType === "variation" && (result === 1 || result === 2 || result === -3 || result === -4)) {
+    } else if ((this.gameType === "variation") && (result === 1 || result === 2 || result === -3 || result === -4)) {
       this.winner = this.player1.name;
       this.player1.wins ++;
       this.player1.saveWinsToStorage();
