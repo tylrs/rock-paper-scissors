@@ -33,7 +33,6 @@ function showMode(event) {
   if (event.target.closest('button')) {
     var gameMode = event.target.closest('button').id;
     currentGame = new Game(gameMode);
-    renderPlayerInfo();
     renderFighterSelection(gameMode);
     hide(chooseGameView);
     show(gameBoardView);
@@ -70,15 +69,14 @@ function renderPlayerInfo() {
   `
     <p class="emoji">${currentGame.player1.emoji}</p>
     <h2>${currentGame.player1.name}</h2>
-    <h4 id="humanWins">Wins: 0</h4>
+    <h4 id="humanWins">Wins: ${currentGame.player1.wins}</h4>
   `
   player2Info.innerHTML =
   `
     <p class="emoji">${currentGame.player2.emoji}</p>
     <h2>${currentGame.player2.name}</h2>
-    <h4 id="computerWins">Wins: 0</h4>
+    <h4 id="computerWins">Wins: ${currentGame.player2.wins}</h4>
   `
-
 }
 
 function renderFighterSelection(gameMode) {
@@ -141,6 +139,8 @@ function displayWinnerMessage(winner, p1Emoji, p2Emoji) {
 }
 
 function displayWins(player1Wins, player2Wins) {
+  humanWins = document.querySelector('#humanWins');
+  computerWins = document.querySelector('#computerWins');
   humanWins.innerText = `Wins: ${player1Wins}`;
   computerWins.innerText = `Wins: ${player2Wins}`;
 }
