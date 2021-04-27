@@ -96,6 +96,8 @@ function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
   hide(gameBoardView);
   show(gameBoardResults);
   hide(changeGameButton);
+  player1Choice.innerHTML = `<p>${currentGame.player1.name}r Choice</p>`
+  player2Choice.innerHTML = `<p>${currentGame.player2.name} Choice</p>`
   var fighterSelection = currentGame[gameMode];
   for (var i = 0; i < fighterSelection.length; i++) {
     var renderedFighter =
@@ -119,8 +121,6 @@ function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
 function resetResultsDOM() {
   var timeout = setTimeout(function() {
     headerSubtitle.innerText = "Choose your fighter"
-    player1Choice.innerHTML = `<p>${currentGame.player1.name}r Choice</p>`
-    player2Choice.innerHTML = `<p>${currentGame.player2.name} Choice</p>`
     show(gameBoardView);
     hide(gameBoardResults);
     show(changeGameButton);
