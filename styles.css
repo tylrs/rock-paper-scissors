@@ -173,6 +173,11 @@ div > h2 {
 	width: 50%;
 }
 
+.player-choice figure {
+	height: 80%;
+	width: 65%;
+}
+
 figure {
 	align-items: center;
 	display: flex;
@@ -187,11 +192,6 @@ figure {
 figcaption {
 	cursor: pointer;
 	padding-top: 10%;
-}
-
-.player-choice figure {
-	height: 80%;
-	width: 65%;
 }
 
 .fighter {

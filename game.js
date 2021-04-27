@@ -27,10 +27,6 @@ class Game {
     this.player1.takeTurn(userChoice, this);
     this.player2.takeTurn(userChoice, this);
     this.checkWinner();
-    renderPlayerChoices(this.player1Fighter, this.player2Fighter, this.gameType);
-    displayWinnerMessage(this.winner);
-    displayWins(this.player1.wins, this.player2.wins);
-    this.resetBoard();
   }
 
   checkWinner() {
@@ -60,10 +56,7 @@ class Game {
   }
 
   resetBoard() {
-    var timeout = setTimeout(function() {
-      this.player1Fighter = 0;
-      this.player2Fighter = 0;
-      resetResultsDOM();
-    }, 3000);
+    this.player1Fighter = 0;
+    this.player2Fighter = 0;
   }
 }
