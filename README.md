@@ -16,27 +16,22 @@ This project is a rock-paper-scissors game with 2 playable modes. One mode is th
 - To view the project in action, [click here!]()
 
 ## Features
-- Users can choose between two game modes, classic and variation
+- Users can choose between two game modes: classic and variation
 - Users can select between 3 "fighter" options in classic mode and 5 "fighter" options in variation mode.
 - Each fighter has an equal chance of winning or losing to the computer.
 - Both the user's and computer's wins are saved and displayed on the page. The total number of wins will persist on page load due to local storage
 
 Users can choose between two game modes
-![alt text]()
+![alt text](./gifs/mode-demonstration.gif)
 
-Users can choose between multiple fighters
-![alt text]()
+Users can play classic mode
+![alt text](./gifs/3-fighter-demo2.gif)
 
-User's and computer's choices will be displayed along with the results of the matchup.
-![alt text]()
-
-Players' wins are displayed on the side
-![alt text]()
-
-Players' wins persist on page load
-![alt text]()
+Users can play variation mode
+![alt text](./gifs/5-fighter-demo.gif)
 
 User can change game mode after playing a round
+![alt text](./gifs/change-game-2.gif)
 
 ### Future Additions
 - Add ability to customize user name and associated emoji
