@@ -1,8 +1,6 @@
 //DOM elements
 var humanWins = document.querySelector('#humanWins');
 var computerWins = document.querySelector('#computerWins');
-var classicModeButton = document.querySelector('#classic');
-var variationModeButton = document.querySelector('#variation');
 var chooseGameView = document.querySelector('.choose-game');
 var gameBoardView = document.querySelector('.game-board');
 var gameBoardResults = document.querySelector('.game-board-results')
@@ -78,7 +76,6 @@ function renderFighterSelection(gameMode) {
 }
 
 function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
-  console.log("running renderPlayerChoices");
   hide(gameBoardView);
   show(gameBoardResults);
   hide(changeGameButton);
@@ -110,7 +107,7 @@ function resetResultsDOM() {
     show(gameBoardView);
     hide(gameBoardResults);
     show(changeGameButton);
-  }, 300000);
+  }, 3000);
 }
 
 function displayWinnerMessage(winner) {

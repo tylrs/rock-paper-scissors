@@ -201,16 +201,15 @@ figcaption {
 	width: 90%;
 }
 
-.fighter:hover {
+.game-board .fighter:hover {
 	cursor: pointer;
 	height: 90%;
 	width: 100%;
 }
 
-.player-choice .fighter:hover {
-	cursor: default;
-	height: 84%;
-	width: 90%;
+.player-choice .fighter {
+	height: 88%;
+	width: 76%;
 }
 
 /* Display */
