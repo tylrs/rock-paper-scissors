@@ -1,6 +1,6 @@
 class Game {
   constructor(gameMode) {
-    this.player1 = new Player("You", "🤓");
+    this.player1 = new Player("You", "🧑‍💻");
     this.player2 = new Player("Computer", "📟");
     (gameMode === "classic") ? this.gameTypeNum = 4 : this.gameTypeNum = 6;
     this.gameType = gameMode;
@@ -9,14 +9,14 @@ class Game {
     this.player2Fighter = 0;
     this.winner = "";
     this.classic = [
-      {id: 3, src: "./assets/kimberly.png", alt: "jeff/kayla", figCaption: "Kimberly"},
+      {id: 3, src: "./assets/jayla.png", alt: "jeff/kayla", figCaption: "Jayla"},
       {id: 2, src: "./assets/willther.jpg", alt: "heather/will", figCaption: "Willther"},
       {id: 1, src: "./assets/weff.png", alt: "jeff/will", figCaption: "Weff"}
     ];
     this.variation = [
       {id: 5, src: "./assets/keff.png", alt: "kayla/jeff", figCaption: "Keff"},
       {id: 4, src: "./assets/taylor2.png", alt: "best coder ever", figCaption: "Student"},
-      {id: 3, src: "./assets/kimberly.png", alt: "jeff/kayla", figCaption: "Kimberly"},
+      {id: 3, src: "./assets/jayla.png", alt: "jeff/kayla", figCaption: "Jayla"},
       {id: 2, src: "./assets/willther.jpg", alt: "heather/will", figCaption: "Willther"},
       {id: 1, src: "./assets/weff.png", alt: "jeff/will", figCaption: "Weff"}
     ];
@@ -27,10 +27,6 @@ class Game {
     this.player1.takeTurn(userChoice, this);
     this.player2.takeTurn(userChoice, this);
     this.checkWinner();
-    renderPlayerChoices(this.player1Fighter, this.player2Fighter, this.gameType);
-    displayWinnerMessage(this.winner);
-    displayWins(this.player1.wins, this.player2.wins);
-    this.resetBoard();
   }
 
   checkWinner() {
@@ -43,7 +39,7 @@ class Game {
       this.winner = this.player1.name;
       this.player1.wins ++;
       this.player1.saveWinsToStorage();
-    } else if (this.gameType === "variation" && result === 1 || result === 2 || result === -3 || result === -4) {
+    } else if ((this.gameType === "variation") && (result === 1 || result === 2 || result === -3 || result === -4)) {
       this.winner = this.player1.name;
       this.player1.wins ++;
       this.player1.saveWinsToStorage();
@@ -60,10 +56,7 @@ class Game {
   }
 
   resetBoard() {
-    var timeout = setTimeout(function() {
-      this.player1Fighter = 0;
-      this.player2Fighter = 0;
-      resetResultsDOM();
-    }, 3000);
+    this.player1Fighter = 0;
+    this.player2Fighter = 0;
   }
 }
