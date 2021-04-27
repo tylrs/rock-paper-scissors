@@ -12,9 +12,6 @@ Turing 2103 FE Mod 1 Final Solo Project
 ## Introduction
 This project is a rock-paper-scissors game with 2 playable modes. One mode is the classic 3 way rock paper scissors and the other is a 5 way variation. Instead of the typical options of rock, paper, or scissors, I changed the options to different Turing instructors. To avoid accusations of bias in deciding which of my instructors would defeat other instructors, I decided to mix up each instructor's face with another. When the user selects their choice, the "computer" player selects another option randomly.
 
-## Links  
-- To view the project in action, [click here!]()
-
 ## Features
 - Users can choose between two game modes: classic and variation
 - Users can select between 3 "fighter" options in classic mode and 5 "fighter" options in variation mode.
