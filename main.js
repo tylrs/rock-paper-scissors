@@ -1,6 +1,6 @@
 //DOM elements
-var humanWins = document.querySelector('#humanWins');
-var computerWins = document.querySelector('#computerWins');
+var player1Wins = document.querySelector('#player1Wins');
+var player2Wins = document.querySelector('#player2Wins');
 var player2Info = document.querySelector('.player2-info')
 var player1Info = document.querySelector('.player1-info')
 var chooseGameView = document.querySelector('.choose-game');
@@ -68,13 +68,13 @@ function renderPlayerInfo() {
   `
     <h2 class="emoji">${currentGame.player1.emoji}</h2>
     <h2>${currentGame.player1.name}</h2>
-    <h3 id="humanWins">Wins: ${currentGame.player1.wins}</h3>
+    <h3 id="player1Wins">Wins: ${currentGame.player1.wins}</h3>
   `
   player2Info.innerHTML =
   `
     <h2 class="emoji">${currentGame.player2.emoji}</h2>
     <h2>${currentGame.player2.name}</h2>
-    <h3 id="computerWins">Wins: ${currentGame.player2.wins}</h3>
+    <h3 id="player2Wins">Wins: ${currentGame.player2.wins}</h3>
   `
 }
 
@@ -119,8 +119,8 @@ function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
 function resetResultsDOM() {
   var timeout = setTimeout(function() {
     headerSubtitle.innerText = "Choose your fighter"
-    player1Choice.innerHTML = `<p>Your Choice</p>`
-    player2Choice.innerHTML = `<p>Computer Choice</p>`
+    player1Choice.innerHTML = `<p>${currentGame.player1.name}r Choice</p>`
+    player2Choice.innerHTML = `<p>${currentGame.player2.name} Choice</p>`
     show(gameBoardView);
     hide(gameBoardResults);
     show(changeGameButton);
@@ -137,11 +137,11 @@ function displayWinnerMessage(winner, p1Emoji, p2Emoji) {
   }
 }
 
-function displayWins(player1Wins, player2Wins) {
-  humanWins = document.querySelector('#humanWins');
-  computerWins = document.querySelector('#computerWins');
-  humanWins.innerText = `Wins: ${player1Wins}`;
-  computerWins.innerText = `Wins: ${player2Wins}`;
+function displayWins(p1Wins, p2Wins) {
+  player1Wins = document.querySelector('#player1Wins');
+  player2Wins = document.querySelector('#player2Wins');
+  player1Wins.innerText = `Wins: ${p1Wins}`;
+  player2Wins.innerText = `Wins: ${p2Wins}`;
 }
 
 function getRandomNumber(max) {

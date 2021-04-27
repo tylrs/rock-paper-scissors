@@ -111,13 +111,13 @@ li {
 	grid-column: 1;
 }
 
-.computer-side {
+.player2-side {
 	background-color: rgb(109,109,113);
 	grid-column: 3;
 }
 
 .player-side,
-.computer-side {
+.player2-side {
 	align-items: center;
 	background-image: url("./assets/turingLogo.png");
 	background-position: 50% 90%;
