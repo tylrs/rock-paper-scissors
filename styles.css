@@ -139,16 +139,16 @@ div > h2 {
 	font-size: 120%;
 }
 
-.computer-info {
+.player2-info {
 	background-color: rgb(112,237,249);
 }
 
-.human-info {
+.player1-info {
 	background-color: rgb(238,177,62);
 }
 
 .emoji {
-	font-size: 166%;
+	font-size: 190%;
 }
 
 /* Game board */
@@ -202,7 +202,7 @@ figcaption {
 	cursor: pointer;
 	height: 90%;
 	width: 100%;
-	animation: shake 0.s;
+	animation: shake 0.5s;
 	animation-iteration-count: infinite;
 }
 

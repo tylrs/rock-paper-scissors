@@ -1,6 +1,8 @@
 //DOM elements
 var humanWins = document.querySelector('#humanWins');
 var computerWins = document.querySelector('#computerWins');
+var player2Info = document.querySelector('.player2-info')
+var player1Info = document.querySelector('.player1-info')
 var chooseGameView = document.querySelector('.choose-game');
 var gameBoardView = document.querySelector('.game-board');
 var gameBoardResults = document.querySelector('.game-board-results')
@@ -23,6 +25,7 @@ function renderPreviousGameInfo() {
   currentGame = new Game("classic");
   currentGame.player1.retrieveWinsFromStorage();
   currentGame.player2.retrieveWinsFromStorage();
+  renderPlayerInfo();
   displayWins(currentGame.player1.wins, currentGame.player2.wins);
 }
 
@@ -30,6 +33,7 @@ function showMode(event) {
   if (event.target.closest('button')) {
     var gameMode = event.target.closest('button').id;
     currentGame = new Game(gameMode);
+    renderPlayerInfo();
     renderFighterSelection(gameMode);
     hide(chooseGameView);
     show(gameBoardView);
@@ -55,10 +59,26 @@ function showChooseGameView() {
 //Other Functions
 function displayGame() {
   renderPlayerChoices(currentGame.player1Fighter, currentGame.player2Fighter, currentGame.gameType);
-  displayWinnerMessage(currentGame.winner);
+  displayWinnerMessage(currentGame.winner, currentGame.player1.emoji, currentGame.player2.emoji);
   displayWins(currentGame.player1.wins, currentGame.player2.wins);
   resetResultsDOM();
   currentGame.resetBoard();
+}
+
+function renderPlayerInfo() {
+  player1Info.innerHTML =
+  `
+    <p class="emoji">${currentGame.player1.emoji}</p>
+    <h2>${currentGame.player1.name}</h2>
+    <h4 id="humanWins">Wins: 0</h4>
+  `
+  player2Info.innerHTML =
+  `
+    <p class="emoji">${currentGame.player2.emoji}</p>
+    <h2>${currentGame.player2.name}</h2>
+    <h4 id="computerWins">Wins: 0</h4>
+  `
+
 }
 
 function renderFighterSelection(gameMode) {
@@ -110,11 +130,11 @@ function resetResultsDOM() {
   }, 3000);
 }
 
-function displayWinnerMessage(winner) {
+function displayWinnerMessage(winner, p1Emoji, p2Emoji) {
   if (winner === "You") {
-    headerSubtitle.innerText = `${winner} are the winner!`;
+    headerSubtitle.innerText = `${p1Emoji}${winner} are the winner!${p1Emoji}`;
   } else if (winner !== "Draw") {
-    headerSubtitle.innerText = `${winner} is the winner!`;
+    headerSubtitle.innerText = `${p2Emoji}${winner} is the winner!${p2Emoji}`;
   } else {
     headerSubtitle.innerText = winner;
   }
