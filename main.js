@@ -110,7 +110,7 @@ function resetResultsDOM() {
     show(gameBoardView);
     hide(gameBoardResults);
     show(changeGameButton);
-  }, 3000);
+  }, 300000);
 }
 
 function displayWinnerMessage(winner) {

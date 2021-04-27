@@ -204,6 +204,12 @@ figcaption {
 .fighter:hover {
 	cursor: pointer;
 	height: 90%;
+	width: 100%;
+}
+
+.player-choice .fighter:hover {
+	cursor: default;
+	height: 84%;
 	width: 90%;
 }
 
