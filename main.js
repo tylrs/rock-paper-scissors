@@ -47,6 +47,13 @@ function runGame(event) {
   }
 }
 
+function showChooseGameView() {
+  show(chooseGameView);
+  hide(gameBoardView);
+  hide(changeGameButton);
+  headerSubtitle.innerText = "Unlock your potential";
+}
+
 //Other Functions
 function displayGame() {
   renderPlayerChoices(currentGame.player1Fighter, currentGame.player2Fighter, currentGame.gameType);
@@ -70,13 +77,6 @@ function renderFighterSelection(gameMode) {
   }
 }
 
-function showChooseGameView() {
-  show(chooseGameView);
-  hide(gameBoardView);
-  hide(changeGameButton);
-  headerSubtitle.innerText = "Unlock your potential";
-}
-
 function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
   console.log("running renderPlayerChoices");
   hide(gameBoardView);
@@ -84,37 +84,20 @@ function renderPlayerChoices(p1Fighter, p2Fighter, gameMode) {
   hide(changeGameButton);
   var fighterSelection = currentGame[gameMode];
   for (var i = 0; i < fighterSelection.length; i++) {
+    var renderedFighter =
+    `
+      <figure id="${fighterSelection[i].id}">
+        <img class="fighter" src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
+        <figcaption>${fighterSelection[i].figCaption}</figcaption>
+      </figure>
+    `
     if (parseInt(fighterSelection[i].id) === p1Fighter && parseInt(fighterSelection[i].id) === p2Fighter) {
-      player1Choice.innerHTML +=
-      `
-        <figure id="${fighterSelection[i].id}">
-          <img class="fighter" src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
-          <figcaption>${fighterSelection[i].figCaption}</figcaption>
-        </figure>
-      `
-      player2Choice.innerHTML +=
-      `
-        <figure id="${fighterSelection[i].id}">
-          <img class="fighter" src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
-          <figcaption>${fighterSelection[i].figCaption}</figcaption>
-        </figure>
-      `
+      player1Choice.innerHTML += renderedFighter;
+      player2Choice.innerHTML += renderedFighter;
     } else if (parseInt(fighterSelection[i].id) === p1Fighter) {
-      player1Choice.innerHTML +=
-      `
-        <figure id="${fighterSelection[i].id}">
-          <img class="fighter" src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
-          <figcaption>${fighterSelection[i].figCaption}</figcaption>
-        </figure>
-      `
+      player1Choice.innerHTML += renderedFighter;
     } else if (parseInt(fighterSelection[i].id) === p2Fighter) {
-      player2Choice.innerHTML +=
-      `
-        <figure id="${fighterSelection[i].id}">
-          <img class="fighter" src="${fighterSelection[i].src}" alt="${fighterSelection[i].alt}">
-          <figcaption>${fighterSelection[i].figCaption}</figcaption>
-        </figure>
-      `
+      player2Choice.innerHTML += renderedFighter;
     }
   }
 }
