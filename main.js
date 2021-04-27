@@ -7,7 +7,6 @@ var chooseGameView = document.querySelector('.choose-game');
 var gameBoardView = document.querySelector('.game-board');
 var gameBoardResults = document.querySelector('.game-board-results')
 var headerSubtitle = document.querySelector('.title h2')
-var figures = document.querySelectorAll('figure');
 var player1Choice = document.querySelector('#p1-choice');
 var player2Choice = document.querySelector('#p2-choice');
 var changeGameButton = document.querySelector('#changeGame');
