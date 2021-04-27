@@ -106,7 +106,7 @@ li {
 }
 
 /* Side Bars */
-.player-side {
+.player1-side {
 	background-color: rgb(109,109,113);
 	grid-column: 1;
 }
@@ -116,7 +116,7 @@ li {
 	grid-column: 3;
 }
 
-.player-side,
+.player1-side,
 .player2-side {
 	align-items: center;
 	background-image: url("./assets/turingLogo.png");
@@ -136,7 +136,11 @@ div {
 }
 
 div > h2 {
-	font-size: 120%;
+	font-size: 140%;
+}
+
+div > h3 {
+	margin-top: 20%;
 }
 
 .player2-info {
@@ -146,6 +150,8 @@ div > h2 {
 .player1-info {
 	background-color: rgb(238,177,62);
 }
+
+
 
 .emoji {
 	font-size: 190%;

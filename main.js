@@ -1,12 +1,12 @@
 //DOM elements
-var player1Wins = document.querySelector('#player1Wins');
-var player2Wins = document.querySelector('#player2Wins');
-var player2Info = document.querySelector('.player2-info')
-var player1Info = document.querySelector('.player1-info')
 var chooseGameView = document.querySelector('.choose-game');
 var gameBoardView = document.querySelector('.game-board');
 var gameBoardResults = document.querySelector('.game-board-results')
 var headerSubtitle = document.querySelector('.title h2')
+var player1Wins = document.querySelector('#player1Wins');
+var player2Wins = document.querySelector('#player2Wins');
+var player1Info = document.querySelector('.player1-info')
+var player2Info = document.querySelector('.player2-info')
 var player1Choice = document.querySelector('#p1-choice');
 var player2Choice = document.querySelector('#p2-choice');
 var changeGameButton = document.querySelector('#changeGame');
