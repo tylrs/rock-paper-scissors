@@ -3,7 +3,6 @@
 Turing 2103 FE Mod 1 Final Solo Project
 ## Table of Contents
 * [Introduction](#introduction)
-* [Links](#Links)
 * [Features](#Features)
 * [Future Additions](#Future-Additions)
 * [Contributors](#Contributors)
