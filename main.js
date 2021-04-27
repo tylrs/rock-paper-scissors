@@ -1,21 +1,21 @@
 //DOM elements
 var chooseGameView = document.querySelector('.choose-game');
 var gameBoardView = document.querySelector('.game-board');
-var gameBoardResults = document.querySelector('.game-board-results')
-var headerSubtitle = document.querySelector('.title h2')
+var gameBoardResults = document.querySelector('.game-board-results');
+var headerSubtitle = document.querySelector('.title h2');
 var player1Wins = document.querySelector('#player1Wins');
 var player2Wins = document.querySelector('#player2Wins');
-var player1Info = document.querySelector('.player1-info')
-var player2Info = document.querySelector('.player2-info')
+var player1Info = document.querySelector('.player1-info');
+var player2Info = document.querySelector('.player2-info');
 var player1Choice = document.querySelector('#p1-choice');
 var player2Choice = document.querySelector('#p2-choice');
 var changeGameButton = document.querySelector('#changeGame');
 
-//Global Variables
+//Global Variable
 var currentGame;
 
 //Event Listeners
-window.addEventListener('DOMContentLoaded', renderPreviousGameInfo)
+window.addEventListener('DOMContentLoaded', renderPreviousGameInfo);
 chooseGameView.addEventListener('click', showMode);
 gameBoardView.addEventListener('click', runGame);
 changeGameButton.addEventListener('click', showChooseGameView);
